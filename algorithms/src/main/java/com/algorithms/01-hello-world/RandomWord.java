@@ -10,7 +10,6 @@ public class RandomWord {
     String championName = null;
 
     while (!StdIn.isEmpty()) {
-      System.out.println("HERE");t
       tempName = StdIn.readLine();
       tempProb = StdRandom.uniformDouble();
       if (championProb < tempProb) {
