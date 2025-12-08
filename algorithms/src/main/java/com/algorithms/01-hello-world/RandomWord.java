@@ -4,19 +4,17 @@ import edu.princeton.cs.algs4.StdRandom;
 
 public class RandomWord {
   public static void main(String[] args) {
-    Double championProb = 0.0;
-    Double tempProb;
-    String tempName;
-    String championName = null;
+    int index = 0;
+    String championWord = "";
 
     while (!StdIn.isEmpty()) {
-      tempName = StdIn.readLine();
-      tempProb = StdRandom.uniformDouble();
-      if (championProb < tempProb) {
-        championProb = tempProb;
-        championName = tempName;
+      String tempName = StdIn.readString();
+      boolean isNewChampion = StdRandom.bernoulli(1.0 / (1.0 + index));
+      if (isNewChampion) {
+        championWord = tempName;
       }
+      index++;
     }
-    StdOut.print(championName);
+    StdOut.print(championWord);
   }
 }
