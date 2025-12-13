@@ -4,6 +4,9 @@
 # Compiled files
 */target
 
+# Test Resource Files
+**/test/resources/
+
 # Log file
 *.log
 
