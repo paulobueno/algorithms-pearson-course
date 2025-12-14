@@ -27,6 +27,10 @@ public class QuickFindUF {
     return id[p] == id[q];
   }
 
+  public int find(int p) {
+   return id[p];
+  }
+
   public static void main(String[] args) {
     int N = StdIn.readInt();
     var inst = new QuickFindUF(N);
